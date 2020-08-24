@@ -11,4 +11,5 @@
 
 (setq use-package-always-ensure t)
 
-(use-package magit)
+(use-package magit
+  :bind ("<f12>" . magit-status))
