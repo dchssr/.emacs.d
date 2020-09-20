@@ -11,5 +11,7 @@
 
 (setq use-package-always-ensure t)
 
+(unbind-key "C-z")
+
 (use-package magit
   :bind ("<f12>" . magit-status))
