@@ -15,3 +15,6 @@
 
 (use-package magit
   :bind ("<f12>" . magit-status))
+
+(use-package ripgrep
+  :bind ("<f9>" . ripgrep-regexp))
