@@ -14,7 +14,8 @@
 (defun D-prog-mode-hook ()
   "Set up a buffer for programming as opposed to prose or general text."
   (display-line-numbers-mode +1)
-  (visual-line-mode +1))
+  (visual-line-mode +1)
+  (hl-line-mode +1))
 
 (add-hook 'prog-mode-hook #'D-prog-mode-hook)
 
