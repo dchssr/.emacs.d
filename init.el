@@ -19,6 +19,15 @@
 
 (add-hook 'prog-mode-hook #'D-prog-mode-hook)
 
+(progn
+  (unless (require 'emmet-mode nil t)
+    (package-install 'emmet-mode))
+
+  (defun D-mhtml-mode-hook ()
+    (emmet-mode +1))
+
+  (add-hook 'mhtml-mode-hook #'D-mhtml-mode-hook))
+
 (unbind-key "C-z")
 
 (use-package magit
