@@ -20,6 +20,15 @@
 (add-hook 'prog-mode-hook #'D-prog-mode-hook)
 
 (progn
+  (unless (require 'modus-operandi-theme nil :no-error)
+    (package-install 'modus-operandi-theme))
+
+  (defun D-emacs-startup-hook ()
+    (load-theme 'modus-operandi :noconfirm))
+
+  (add-hook 'emacs-startup-hook #'D-emacs-startup-hook))
+
+(progn
   (unless (require 'emmet-mode nil t)
     (package-install 'emmet-mode))
 
