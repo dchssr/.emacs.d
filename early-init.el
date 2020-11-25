@@ -34,4 +34,5 @@ back to DEFAULT-FONT-NAME or \"Monospace\" if none of them are installed."
 	`((width . 80)		; 80-character lines are common in style guides
 	  (tool-bar-lines . 0)
 	  (font . ,chosen-font-face))
-      inhibit-startup-screen t))
+	inhibit-startup-screen t
+	default-frame-alist initial-frame-alist))
