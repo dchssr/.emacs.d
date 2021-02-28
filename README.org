@@ -8,7 +8,7 @@
     git clone git@github.com:dchesser/.emacs.d.git
   #+end_src
 
-  To modify the source-code, use =C-'= (control-apostrophe).
+  To modify the source-code, use =C-c '= (control-C, then apostrophe).
 
 * Read This, Dave!
 
