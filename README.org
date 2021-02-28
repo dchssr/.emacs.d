@@ -1,0 +1,38 @@
+* Introduction
+
+  Org Mode's not quite my fortë so this may take a few attempts.
+  Hopefully doing my configuration literate-style helps me read things through.
+  Majority of this is for personal notes.
+
+  #+begin_src shell
+    git clone git@github.com:dchesser/.emacs.d.git
+  #+end_src
+
+  To modify the source-code, use =C-'= (control-apostrophe).
+
+* Read This, Dave!
+
+  Because your memory probably sucks, dude, you might want to read
+  over these questions in case you decide to change a custom value.
+
+** Looking to change the font?
+
+  Look in =early-init.el= and check out the following properties:
+
+*** =D-preferred-fonts-list=
+
+  This is a /list of strings/ of font face names in order of
+  preference.  When initializing Emacs, a few sanity checks are made
+  first to see whether that font is installed.
+
+**** Details
+
+  If =D-font-installed-p= returns non-nil, that font is good to go.
+  =D-available-preferred-font= returns the name of the first available
+  font and defaults to "Monospace" if none of them are installed.
+  
+*** =D-preferred-font-size=
+
+  Needless to say, it's the size of the font.
+  It is tacked on the end of the font descriptor string when it is
+  generated for the initial frame.
