@@ -14,7 +14,7 @@
 (defcustom D-preferred-font-size 9
   "Whichever font-size works best for me.")
 
-(defun D-font-installed-p (font-name &optional frame)
+(defun D-font-available-p (font-name &optional frame)
   "Returns a list where FONT-NAME is at the car if that font is installed. "
   (unless (stringp font-name)
     (signal 'wrong-type-argument '(font-name)))
@@ -23,7 +23,7 @@
 (defun D-available-preferred-font (&optional default-font-name)
   "Select the first available font from `D-preferred-fonts-list', falling
 back to DEFAULT-FONT-NAME or \"Monospace\" if none of them are installed."
-  (seq-find #'D-font-installed-p
+  (seq-find #'D-font-available-p
 	    D-preferred-fonts-list
 	    (or default-font-name "Monospace")))
 
