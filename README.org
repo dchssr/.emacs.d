@@ -1,38 +1,39 @@
+#+title: Davemacs
+#+author: Dave C.
+
 * Introduction
 
-  Org Mode's not quite my fortë so this may take a few attempts.
-  Hopefully doing my configuration literate-style helps me read things through.
-  Majority of this is for personal notes.
+  If I had a nickel for every useless commit message that I used to do
+  back in school, I could probably retire early on a yacht.
+  But as I don't get paid for shoddy commit messages, I figured I
+  ought to document my choices early and coherently.
+  In other words, a literate configuration is the new direction.
+
+  Before one can make a program from scratch, you must first
+  =git clone= the universe.
 
   #+begin_src shell
     git clone git@github.com:dchesser/.emacs.d.git
   #+end_src
 
-  To modify the source-code, use =C-c '= (control-C, then apostrophe).
+  To modify the source-code, use =C-c '= (control-C, then apostrophe)
+  in the code blocks.
+  Without further ado...
 
-* Read This, Dave!
+* Me
 
-  Because your memory probably sucks, dude, you might want to read
-  over these questions in case you decide to change a custom value.
-
-** Looking to change the font?
-
-  Look in =early-init.el= and check out the following properties:
-
-*** =D-preferred-fonts-list=
-
-  This is a /list of strings/ of font face names in order of
-  preference.  When initializing Emacs, a few sanity checks are made
-  first to see whether that font is installed.
-
-**** Details
-
-  If =D-font-installed-p= returns non-nil, that font is good to go.
-  =D-available-preferred-font= returns the name of the first available
-  font and defaults to "Monospace" if none of them are installed.
+  #+begin_src emacs-lisp
+    (setq user-full-name "Dave Chesser"
+	  user-mail-address "dave@dchesser.website")
+  #+end_src
   
-*** =D-preferred-font-size=
+  So the name's Dave. Hi.
+  I'm a programmer by trade, so [[https://gnu.org/s/emacs/][GNU Emacs]] was a logical choice in tooling.
 
-  Needless to say, it's the size of the font.
-  It is tacked on the end of the font descriptor string when it is
-  generated for the initial frame.
+  - It's been around for decades, so it's no passing fad.
+  - It's popular, so there's almost a package for /everything/.
+  - It's scripted via [[https://www.gnu.org/software/emacs/manual/html_node/eintr/][Emacs Lisp]], its dialect of [[https://en.wikipedia.org/wiki/Lisp_(programming_language)][Lisp]], to serve as
+    its own computing environment as well as a method of extending
+    its capabilities.
+
+* TODO Document the choices in =early-init.el=.
