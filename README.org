@@ -83,3 +83,16 @@
   [[https://jwiegley.github.io/use-package/][~use-package~]] is a macro to make package-loading a cleaner process
   than a list of ~require~ calls and configuration.
   Any further package will be using this to configure itself.
+
+** Magit
+
+  #+begin_src emacs-lisp
+    (use-package magit
+      :bind ("<f12>" . magit-status))
+  #+end_src
+
+  [[https://magit.vc/][Magit]] is an interactive Git front-end to [[https://git-scm.com/][Git]].
+  No more memorizing all the different command flags just to manage my
+  code commitments; slap a few keys and you're good to go.
+
+  To pull up the Git status for a buffer, press ~F12~.
