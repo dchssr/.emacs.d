@@ -52,3 +52,34 @@
 
     The chosen font size for the font chosen in
     ~D-preferred-fonts-list~.
+
+* Packages
+
+  #+begin_src emacs-lisp
+    (require 'package)
+    ;; Emacs implicitly initializes packages starting with version 27.1.
+    (when (version< emacs-version "27")
+      (package-initialize)
+  #+end_src
+
+  While Emacs does come with a lot out of the box, it's not remotely
+  useful without the extra packages others have written and released.
+
+  #+begin_src emacs-lisp
+    (dolist (repo '(("melpa" . "https://melpa.org/packages/")))
+      (add-to-list 'package-archives repo :append))
+  #+end_src
+
+** ~use-package~
+
+  #+begin_src emacs-lisp
+    (unless (require 'use-package nil :no-error)
+      (package-refresh-contents)
+      (package-install 'use-package))
+
+    (setq use-package-always-ensure t)
+  #+end_src
+
+  [[https://jwiegley.github.io/use-package/][~use-package~]] is a macro to make package-loading a cleaner process
+  than a list of ~require~ calls and configuration.
+  Any further package will be using this to configure itself.
