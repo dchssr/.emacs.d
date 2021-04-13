@@ -53,6 +53,12 @@
     The chosen font size for the font chosen in
     ~D-preferred-fonts-list~.
 
+* Preparation
+
+  #+begin_src emacs-lisp
+    (unbind-key "C-z")
+  #+end_src
+
 * Packages
 
   #+begin_src emacs-lisp
