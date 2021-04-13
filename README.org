@@ -10,13 +10,13 @@
   In other words, a literate configuration is the new direction.
 
   Before one can make a program from scratch, you must first
-  =git clone= the universe.
+  ~git clone~ the universe.
 
   #+begin_src shell
     git clone git@github.com:dchesser/.emacs.d.git
   #+end_src
 
-  To modify the source-code, use =C-c '= (control-C, then apostrophe)
+  To modify the source-code, use ~C-c '~ (control-C, then apostrophe)
   in the code blocks.
   Without further ado...
 
@@ -36,4 +36,19 @@
     its own computing environment as well as a method of extending
     its capabilities.
 
-* TODO Document the choices in =early-init.el=.
+* Customizations
+
+  ~M-x customize-group <RET> D <RET>~ for more details.
+
+** Fonts
+
+*** ~D-preferred-fonts-list~
+
+    List of font names to prefer when opening a frame.
+    If none of the fonts are available, the default
+    will be "Monospace".
+
+*** ~D-preferred-font-size~
+
+    The chosen font size for the font chosen in
+    ~D-preferred-fonts-list~.
