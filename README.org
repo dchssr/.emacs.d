@@ -63,9 +63,9 @@
 
   #+begin_src emacs-lisp
     (require 'package)
-    ;; Emacs implicitly initializes packages starting with version 27.1.
+
     (when (version< emacs-version "27")
-      (package-initialize)
+      (package-initialize))
   #+end_src
 
   While Emacs does come with a lot out of the box, it's not remotely
