@@ -60,7 +60,7 @@
   #+end_src
 
 * Packages
-  ** Magit
+** Magit
 
   #+begin_src emacs-lisp
     (use-package magit
