@@ -94,3 +94,14 @@
      (use-package tex
        :ensure auctex)
    #+end_src
+
+** Markdown
+
+   [[https://daringfireball.net/projects/markdown/][Markdown]] ([[https://jblevins.org/projects/markdown-mode/][major mode]]) is a text format meant to be converted to rich text.
+   It's used in countless places on-line.
+   Markdown is /especially/ the main way I write posts on [[https://dchesser.website][my Web site]].
+   Think of it as a super-set rather than a sub-set of regular markup.
+
+   #+begin_src emacs-lisp
+     (use-package markdown-mode)
+   #+end_src
