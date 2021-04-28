@@ -72,3 +72,25 @@
   code commitments; slap a few keys and you're good to go.
 
   To pull up the Git status for a buffer, press ~F12~.
+
+** AUCTeX
+
+   [[https://www.gnu.org/software/auctex][AUCTeX]] is a package for helping with TeX documents.
+   Ensuring this package isn't straight-forward as it doesn't ~provide~
+   an ~auctex~ feature, but ~tex~ instead.
+
+   #+begin_quote
+   The reason ~(use-package tex :ensure t)~ doesn't work for ~auctex~
+   is because ~auctex~ names a GNU ELPA package (see [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Packages.html][~(emacs) Packages~]]),
+   whereas ~tex~ names a feature (see [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Named-Features.html][~(elisp) Named Features~]]) provided
+   by the ~auctex~ package.
+
+   --- https://emacs.stackexchange.com/a/41324
+   #+end_quote
+
+   The following snippet can also be found on the [[https://github.com/jwiegley/use-package/#package-installation][~use-package~]] README:
+
+   #+begin_src emacs-lisp
+     (use-package tex
+       :ensure auctex)
+   #+end_src
