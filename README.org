@@ -92,7 +92,9 @@
 
    #+begin_src emacs-lisp
      (use-package tex
-       :ensure auctex)
+       :ensure auctex
+       :custom
+       (ConTeXt-Mark-version "IV" "AUCTeX looks like it's still on MkII."))
    #+end_src
 
 ** Markdown
