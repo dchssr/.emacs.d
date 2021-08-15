@@ -126,3 +126,11 @@
    grey-on-black text.
    That and I'm also 95% of the time in good lighting where I'm not
    screeching and clawing at my eye-holes while burning in the glare.
+
+** Lua Mode
+
+   #+begin_src emacs-lisp
+     (use-package lua-mode
+       :custom
+       (lua-indent-level 4))
+   #+end_src
