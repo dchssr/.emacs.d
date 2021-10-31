@@ -134,3 +134,18 @@
        :custom
        (lua-indent-level 4))
    #+end_src
+
+** Emmet
+
+  [[https://emmet.io/][Emmet]] is a faster way to write markup.
+  Life doesn't revolve around Markdown as much as folk like
+  and writing markup is hella painful on the wrists.
+  Punching in CSS-selector-styled renders up what I intended
+  in fewer keystrokes than it took to write this paragraph.
+
+  #+begin_src emacs-lisp
+    (use-package emmet-mode
+      :hook
+      ((mhtml-mode . emmet-mode)
+       (css-mode   . emmet-mode)))
+  #+end_src
