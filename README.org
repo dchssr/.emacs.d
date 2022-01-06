@@ -56,6 +56,7 @@
 * Preparation
 
   #+begin_src emacs-lisp
+    (setq ring-bell-function #'ignore)
     (unbind-key "C-z")
   #+end_src
 
