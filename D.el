@@ -12,6 +12,9 @@
 (defcustom D-preferred-font-size 9
   "Whichever font-size works best for me.")
 
+(defcustom D-org-roam-directory "~/KB"
+  "The location for org-roam to store notes in.")
+
 (defun D-font-available-p (font-name &optional frame)
   "Returns a list where FONT-NAME is at the car if that font is installed. "
   (unless (stringp font-name)

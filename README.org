@@ -150,3 +150,36 @@
       ((mhtml-mode . emmet-mode)
        (css-mode   . emmet-mode)))
   #+end_src
+
+** Org Roam
+
+   [[https://www.orgroam.com/][Org Roam]] is a... Well, that'd be a story and a half just to wrap my
+   head around what all it does.
+   It's supposed to "manage knowledge" but best I can do is scrounge together
+   bits and pieces of how it works.
+   Those capture templates, man...
+
+   #+begin_src emacs-lisp
+     (use-package org-roam
+       :custom
+       (org-roam-directory D-org-roam-directory) ; Specify in D.el
+       (org-roam-capture-templates
+	'(("l" "Literature notes")
+	  ("lb" "Book" plain
+	   "\n* Source\n\nAuthor: %^{Author}\nTitle: ${title}\nYear: %^{Year}\n\n* Summary\n\n%?"
+	   :target (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\\n")
+	   :unnarrowed t)
+	  ("d" "default" plain "%?" :target
+	   (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+	   :unnarrowed t)))
+
+       :bind
+       (("C-c r t" . org-roam-buffer-toggle)
+	("C-c r f" . org-roam-node-find)
+	("C-c r i" . org-roam-node-insert)
+	("C-c r c" . org-roam-capture))
+
+       :config
+       (org-roam-db-autosync-enable))
+   #+end_src
+   
