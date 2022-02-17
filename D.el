@@ -9,7 +9,7 @@
     "IBM Plex Mono")	; https://github.com/IBM/plex
   "List of fonts to use in order of preference.")
 
-(defcustom D-preferred-font-size 9
+(defcustom D-preferred-font-size 12
   "Whichever font-size works best for me.")
 
 (defcustom D-org-roam-directory "~/KB"
