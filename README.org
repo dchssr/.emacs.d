@@ -95,7 +95,10 @@
      (use-package tex
        :ensure auctex
        :custom
-       (ConTeXt-Mark-version "IV" "AUCTeX looks like it's still on MkII."))
+       (ConTeXt-Mark-version "IV" "AUCTeX looks like it's still on MkII.")
+       :config
+       (when (executable-find "arara")
+	 (add-to-list 'TeX-command-list '("Arara" "arara %s" TeX-run-command nil t :help "Run Arara directives"))))
    #+end_src
 
 ** Markdown
