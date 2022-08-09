@@ -28,4 +28,14 @@ back to DEFAULT-FONT-NAME or \"Monospace\" if none of them are installed."
 	    D-preferred-fonts-list
 	    (or default-font-name "Monospace")))
 
+;; Functions that affect state or customizations
+;; are part of the D! namespace.
+;; They are meant for hooks and are generally noninteractive.
+
+(defun D!--use-ConTeXt-quotes ()
+  "Set the current buffer to use ConTeXt-style quotes
+using the \\quotation macro."
+  (setq-local TeX-open-quote  "\\quotation{"
+	      TeX-close-quote "}"))
+
 (provide 'D)

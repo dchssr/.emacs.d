@@ -98,7 +98,8 @@
        (ConTeXt-Mark-version "IV" "AUCTeX looks like it's still on MkII.")
        :config
        (when (executable-find "arara")
-	 (add-to-list 'TeX-command-list '("Arara" "arara %s" TeX-run-command nil t :help "Run Arara directives"))))
+	 (add-to-list 'TeX-command-list '("Arara" "arara %s" TeX-run-command nil t :help "Run Arara directives")))
+       :hook (ConTeXt-mode . D!--use-ConTeXt-quotes))
    #+end_src
 
 ** Markdown
