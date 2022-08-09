@@ -23,8 +23,8 @@
 * Me
 
   #+begin_src emacs-lisp
-       (setq user-full-name "Dave Chesser"
-             user-mail-address "dave@dchesser.website")
+    (setq user-full-name "Dave Chesser"
+	  user-mail-address "me@dchssr.site")
   #+end_src
   
   So the name's Dave. Hi.
