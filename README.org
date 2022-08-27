@@ -22,9 +22,9 @@
 
 * Me
 
-  #+begin_src emacs-lisp
-    (setq user-full-name "Dave Chesser"
-	  user-mail-address "me@dchssr.site")
+#+begin_src emacs-lisp
+  (setq user-full-name "Dave Chesser"
+        user-mail-address "me@dchssr.site")
   #+end_src
   
   So the name's Dave. Hi.
@@ -186,4 +186,3 @@
        :config
        (org-roam-db-autosync-enable))
    #+end_src
-   
