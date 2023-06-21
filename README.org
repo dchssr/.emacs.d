@@ -56,9 +56,18 @@
 * Preparation
 
   #+begin_src emacs-lisp
-    (setq ring-bell-function #'ignore)
     (unbind-key "C-z")
+    (setq ring-bell-function #'ignore)
   #+end_src
+
+  First off, the fact there's a keybinding to minimize my Emacs window is absurd.
+  I can already do that with my window manager.
+  I don't need another way to do that.
+  /Especially/ one that shoves itself in my way if I accidentally hit ~C-z~.
+
+  Second of all, hitting ~C-g~ to cancel whatever I was doing got annoying when it went
+  "Ding! Ding! Ding!" because I hit it one to many times.
+  Thankfully I can just rebind that hook to [[https://www.gnu.org/software/emacs/manual/html_node/elisp/Calling-Functions.html#index-ignore][ignore it]].
 
 * Packages
 ** Magit
